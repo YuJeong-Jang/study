@@ -5,7 +5,7 @@ import 'package:study_netflix/widget/carousel_slider.dart';
 import 'package:study_netflix/widget/circle_slider.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();

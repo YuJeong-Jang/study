@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:study_netflix/screen/home_screen.dart';
+import 'package:study_netflix/screen/more_screen.dart';
 import 'package:study_netflix/widget/bottom_bar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -29,24 +30,25 @@ class _MyAppState extends State<MyApp> {
           length: 4,
           child: Scaffold(
               body: TabBarView(
-                physics: const NeverScrollableScrollPhysics(),
+                physics: NeverScrollableScrollPhysics(),
                 children: <Widget>[
                   HomeScreen(),
                   // Container(
-                  //   child: const Center(child: Text('home')),
+                  //   child: Center(child: Text('home')),
                   // ),
                   Container(
-                    child: const Center(child: Text('search')),
+                    child: Center(child: Text('search')),
                   ),
                   Container(
-                    child: const Center(child: Text('save')),
+                    child: Center(child: Text('save')),
                   ),
-                  Container(
-                    child: const Center(child: Text('more')),
-                  )
+                  MoreScreen()
+                  // Container(
+                  //   child: Center(child: Text('more')),
+                  // )
                 ],
               ),
-              bottomNavigationBar: const Bottom()),
+              bottomNavigationBar: Bottom()),
         ));
   }
 }
